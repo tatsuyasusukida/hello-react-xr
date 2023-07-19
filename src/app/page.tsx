@@ -2,7 +2,7 @@
 
 import { Box, Cylinder, Sphere } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { VRButton, XR, Controllers, Hands } from "@react-three/xr";
+import { VRButton, XR, Controllers } from "@react-three/xr";
 
 export default function Home() {
   return (
@@ -17,7 +17,6 @@ export default function Home() {
       <Canvas className="aspect-video border border-gray-300">
         <XR>
           <Controllers />
-          <Hands />
           <ambientLight intensity={0.1}></ambientLight>
           <pointLight intensity={0.8} position={[10, 10, 10]}></pointLight>
           <Box args={[1, 1, 1]} position={[-1.5, 0, -5]}>
